@@ -1,7 +1,10 @@
-from flask import Flask
+from typing import Union
 
-app = Flask(__name__)
+from fastapi import FastAPI
 
-@app.route("/")
-def index():
-    return "Hello, World!"
+app = FastAPI()
+
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}

@@ -1,1 +1,1 @@
-python3 -m flask --app server run
+python3 -m fastapi dev server.py
